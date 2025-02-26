@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Made My Own Telescope</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center/cover; /* Use your local image */
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, black, white); /* Black-to-White Gradient */
+            padding: 40px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        /* Sliding Contact Bar */
+        .contact-bar {
+            background: rgba(0, 191, 255, 0.9);
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-text {
+            display: inline-block;
+            position: relative;
+            animation: slideText 20s linear infinite;
+        }
+
+        .contact-bar:hover .contact-text {
+            animation-play-state: paused;
+        }
+
+        @keyframes slideText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .contact-bar a {
+            color: yellow;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-bar a:hover {
+            color: #ffdd44;
+            text-decoration: underline;
+        }
+
+        .telescope-img, .material-img {
+            width: 50%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 191, 255, 0.5);
+            margin: 20px auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .telescope-img:hover, .material-img:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            background: rgba(40, 40, 80, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 0px 25px rgba(0, 191, 255, 0.6);
+        }
+
+        h2 {
+            color: #00d4ff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        h2:hover {
+            color: #ffdd44;
+        }
+
+        /* Collapsible Materials Section */
+        #materials-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .show {
+            display: block !important;
+            opacity: 1 !important;
+        }
+
+        footer {
+            background: rgba(10, 10, 30, 0.9);
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            .telescope-img, .material-img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        How I Made My Own Telescope
+    </header>
+
+    <!-- Sliding Contact Bar -->
+    <div class="contact-bar">
+        <span class="contact-text">
+            If you need any help to build your own telescope in budget 
+            <a href="mailto:astrophilesam@gmail.com">Email Me</a> |
+            <a href="https://wa.me/8887658905" target="_blank">WhatsApp Me</a>
+        </span>
+    </div>
+
+    <img src="telescope.jpg" alt="My Telescope" class="telescope-img">
+
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>
+                <strong>Astrophile Sam (Shubham Gupta) – an amateur astronomer with an insatiable love for the cosmos.</strong>  
+                Since childhood, I have been captivated by the night sky, spending countless hours gazing at the stars, lost in the wonders of the universe. The vastness of space, with its infinite galaxies, planets, and celestial mysteries, has always fascinated me, igniting a passion that has only grown stronger over the years.  
+                <br><br>
+                I remember my earliest nights of stargazing, filled with dreams of visiting other planets, touching the surface of the Moon, and uncovering the secrets of the cosmos. As I grew older, I realized the challenges of space travel, but rather than diminishing my passion, this understanding deepened my curiosity. I turned to telescopes, books, and scientific exploration, determined to bring the universe closer to me.  
+                <br><br>
+                Every clear night sky is an opportunity for discovery. Whether observing the Moon’s craters, tracking planetary movements, or searching for deep-sky objects, I find immense joy in exploring the heavens. My telescope is not just an instrument; it is my window to the cosmos, a bridge between my curiosity and the vast expanse beyond.  
+                <br><br>
+                Beyond mere observation, my love for astronomy extends to the science behind celestial phenomena—how stars are born and die, how galaxies evolve, and how the universe itself came into existence. My academic journey in physics and astronomy is not just about learning facts; it is about understanding the grand cosmic design.  
+                <br><br>
+                For me, the night sky is more than a spectacle—it is a lifelong adventure, a source of inspiration, and a reminder of the boundless wonders that lie beyond our world.
+            </p>
+            <img src="newtonian_telescope.jpg" alt="Newtonian Telescope" class="telescope-img">
+        </div>
+ 
+        <div class="section">
+            <h2 onclick="toggleMaterials()">Materials Used ⬇️</h2>
+            <div id="materials-content">
+                <p>To build my telescope, I used the following essential materials:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>🔹 **Primary Mirror (127mm)**</li>
+                    <img src="primary_mirror.jpg" alt="Primary Mirror" class="material-img">
+                    
+                    <li>🔹 **Eyepiece (10mm & 25mm)**</li>
+                    <img src="eyepiece.jpg" alt="Eyepiece" class="material-img">
+
+                    <li>🔹 **PVC Pipe (for the Optical Tube)**</li>
+                    <img src="pvc_pipe.jpg" alt="PVC Tube" class="material-img">
+
+                    <li>🔹 **Dobsonian Mount (Wooden Base)**</li>
+                    <img src="dobsonian_mount.jpg" alt="Dobsonian Mount" class="material-img">
+                </ul>
+            </div>
+
+        <div class="section">
+            <h2>Moon through my homemade telescope</h2>
+            <img src="moon1.jpg" alt="Moon through my telescope" class="telescope-img">
+            <img src="moon2.jpg" alt="Moon through my telescope" class="telescope-img">
+            <video controls class="telescope-img">
+                <source src="moonclip.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <footer>
+        Created by Astrophile Sam (Shubham Gupta) | Inspired by Astronomy
+    </footer>
+
+    <script>
+        function toggleMaterials() {
+            var content = document.getElementById('materials-content');
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+            } else {
+                content.classList.add('show');
+            }
+        }
+    </script>
+
+</body>
+</html>
